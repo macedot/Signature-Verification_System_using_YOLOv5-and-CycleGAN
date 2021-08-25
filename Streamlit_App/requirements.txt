@@ -1,5 +1,5 @@
 # pip install -r requirements.txt
-
+scikit-learn
 streamlit>=0.82.0
 
 #requirements for yolov5
@@ -15,7 +15,8 @@ torchvision>=0.8.1
 tqdm>=4.41.0
 
 # logging -------------------------------------
-tensorboard>=2.4.1
+#tensorboard>=2.4.1
+tensorboard>=2
 # wandb
 
 # plotting ------------------------------------
@@ -36,4 +37,5 @@ dominate>=2.4.0
 visdom>=0.1.8.8
 
 #requirements for vgg16 feature extractor
-tensorflow==2.4.1
+#tensorflow==2.4.1
+tensorflow>=2
