@@ -11,7 +11,7 @@ This project is based on these two papers [[1]](https://repositum.tuwien.at/bits
 This project has been trained and tested on signature datasets ([Tobacco 800](http://tc11.cvc.uab.es/datasets/Tobacco800_1) and [Kaggle Signature Dataset](https://www.kaggle.com/robinreni/signature-verification-dataset)).
   
 
-**Model weights and data is not added, will be update soon. You can train the models using the instructions provided below.  
+**Model weights and data is [available here](https://drive.google.com/drive/folders/1397Q9nqMqEsSesB9UvlIL1u1IGzrUOIK?usp=sharing).  
 The application would be made available for testing over [here]() soon.**  
   
 ## Workflow
@@ -33,7 +33,7 @@ In the final phase, a VGG16 based feature extractor is used. The model is fine-t
 The cleaned image from the document and the reference signature (anchor image) of the user is fed into the model. The model outputs a vector (feature) that represents the signature. The features extracted from both the anchor image and cleaned signature from the document is used to compute the cosine similarity. Cosine similarity tells us how similar these two images are and it's value ranges from 0 to 1. From my experimentation, I have found out that for a matching signature pair the values are close to 1 and for a non-matching signature pair, the values are below 0.7. So I recommend a cosine similarity score of 0.8 as a threshold value to decide whether the signatures are a match or not. A more detailed take on the thresholds could be found on the [recommendations](#recommendations) section.  
 
 ## RUN THE UI APP
-Install the requirements by running `pip install -qr requirement.txt`  
+Install the requirements by running `pip install -qr requirements.txt`  
 To run the app, `streamlit run ui.py   `
 
 ## To Train the models with custom dataset
